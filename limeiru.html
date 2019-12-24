@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网页</title>
+	<meta charset="UTF-8"/>
+	<style type="text/css">
+	*{
+		padding:0px;
+		margin:0px;
+	}
+	a{
+		text-decoration: none;
+	}
+	ul,li{
+		list-style: none;
+	}
+
+	/*头部*/
+	.head-wrap{
+		width: 100%;
+		height: 40px;
+		background-color: black;
+	}
+	.head{
+		margin: 0px auto;
+		width: 1200px;
+		height: 40px;
+		background-color: black;
+		position: relative;
+	}
+	.home{
+		float: left;
+	}
+	.guide{
+		position: absolute;
+		left: 400px;
+		top: 10px;
+	}
+	.guide ul li{
+		border-right: 1px solid rgb(120,120,120); 
+		display: inline-block;
+		width: 120px;
+		text-align: center;
+	}
+	.guide a{
+		display: inline;
+		text-decoration: none;
+		font-size: 18px;
+		color: white;
+	}
+	.guide a:hover{
+		color: #C20C0C;
+	}
+	.login{
+		color: rgb(120,120,120);
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+	.login a{
+		color: white;
+		font-size: 16px;
+	}
+	.login a:hover{
+		color: #C20C0C;
+	}
+
+	/*宣传图片*/
+	.picture{
+		height:404px;
+		background:url(limeiru/img.jpg);
+		background-position:center center;
+		background-repeat: no-repeat;
+		border-top: 5px solid black;
+
+	}
+	.picture img{
+		margin:0 auto;
+	}
+	/*图片介绍*/
+	#text{
+		margin-top:80px;
+		margin-left:380px;
+		color:white;
+		font-size: 50px;
+	}
+	/*输入框*/
+	#input1{
+		height:45px;
+		width:650px;
+		color: gray;
+		margin-top: 50px;
+		margin-left:250px;
+	}
+	/*搜索按钮*/
+	#button{
+		height:49px;
+		width:120px;
+		background-color:red;
+		border:1px solid red;
+		color:white;
+	}
+
+	/*主体部分*/
+	.main{
+		position: relative;
+	}
+	/*左侧部分*/
+	.left{
+		margin-left: 50px;
+	}
+	/*面包屑*/
+	.main p{
+		margin-left:50px;
+		margin-top:5px;
+		font-size: 12px;
+		color: black;
+	}
+	.main p a{
+		color:rgb(184,187,194);
+	}
+
+	/*左边提示语*/
+	.leftTop{
+		height:20px;
+		width:130px;
+		color:black;
+		border-left:5px solid red;
+		margin-top: 10px;
+		padding-bottom: 1px;
+		padding-left: 5px;
+		
+	}
+
+	.leftBox{
+		height:840px;
+		width:730px;
+	}
+	.leftBox li{
+		height:120px;
+		width:350px;
+		float:left;
+		margin-right: 10px;
+		border-bottom: 1px solid gray;
+	}
+
+	.leftBox .introduce{
+		height:120px;
+		width:230px;
+		float: right;
+	}
+	.leftBox .introduce div{
+		width:230px;
+		height:60px;
+		font-size: 14px;
+		color: gray;
+		padding-top: 10px;
+	}
+	.leftBox .introduce .strong{
+		height: 20px;
+		color: blue; 
+		font-size: 16px;
+	}
+	.leftBox .introduce span{
+		font-size: 12px;
+		color: blue;
+		
+	}
+	/*右侧部分*/
+	.right{
+		height:840px;
+		width:480px;
+		position: absolute;
+		right:0px;
+		top:26px;
+	}
+	.rightTop{
+		height:20px;
+		width:130px;
+		color:black;
+		border-left:5px solid red;
+		padding-bottom: 1px;
+		padding-left: 5px;
+	}
+	.rightBox li{
+		height:102px;
+		width:480px;
+		margin-top:20px;
+	}
+	.rightBox .information{
+		width:300px;
+		height:100px;
+		float: right;
+
+	}
+	.rightBox .information div{
+		font-size: 14px;
+		padding-top: 5px;
+		color: gray;
+		height: 50px;
+	}
+	.rightBox .information span{
+		font-size:14px;
+		color:blue;
+	}
+	/*底部*/
+	.footer-wrap{
+		height:172px;
+		background-color: black;
+		color: gray;
+		font-size: 12px;
+	}
+	.footer{
+		height:172px;
+		width:1200px;
+		margin:0 auto;
+	}
+	.footer a{
+		color: gray;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.footer1{
+		padding-top: 30px;
+		padding-bottom: 20px;
+		padding-left: 400px;
+	}
+	.a1{
+		margin-left:15px;
+	}
+	.footer2{
+		padding-left:300px;
+	}
+	.footer3{
+		padding-top:10px;
+		padding-left: 260px;
+	}
+	.footer4{
+		padding-top:10px;
+		padding-left:400px;
+	}
+	.footer span{
+		margin-left: 10px;
+		margin-right:10px;
+	}
+
+	/*回到顶部*/
+	#btnTop {
+		   display: none;
+		   position: fixed;
+		   bottom: 20px;
+		   right: 30px;
+		   z-index: 99;
+		   border: none;
+		   cursor: pointer;
+		   padding: 15px;
+		   border-radius: 10px;
+		   background-color: rgba(0,0,0,30%);
+ 		}
+ 	#btnTop:hover {
+   			background-color: rgba(255,0,0,10%);
+ 		}
+
+ 	#myImg{
+ 		position: absolute;
+ 		top:200px;
+ 		left:100px;
+ 	}
+	</style>
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="head-wrap">
+	<div class="head">
+		<div class="home"><a href=""><img src="limeiru/logo.png"/></a></div>
+		<div class="guide">
+			<ul>
+				<li><a href="">首页</a></li>
+				<li><a href="">补剂推荐</a></li>
+				<li><a href="">饮食库</a></li>
+				<li><a href="">器械知识</a></li>
+				<li><a href="">健身达人</a></li>
+			</ul>
+		</div>
+		<div class="login"><a href="">登陆</a>&nbsp|&nbsp<a href="">注册</a></div>
+	</div>
+</div>
+<!-- 宣传图片 -->
+<div class="picture" id="picture">
+	<div id="text">
+		专业全面的食物数据库
+	</div>
+	<div class="inp">
+	<input type="text" value="搜索食物查询热量" id="input1" /><input type="button" value="搜索" id="button"/>
+	</div>
+</div>
+<!-- 主体部分 -->
+<div class="main-wrap" id="main-wrap">
+	<div class="main" id="main">
+		<!-- 左侧部分 -->
+		<!-- 面包屑 -->
+		<p>当前位置：<a href="#">健身</a>>><a href="">食物百科</a></p>
+		<div class="left">
+			<div class="leftTop">常见食物分类</div>
+			<ul class="leftBox">
+				<li class="introduceDiv" id="introduceDiv">
+				<img src="limeiru/img1.png" alt="不要着急，我在努力加载哦" class="imgs">
+				<div class="introduce" >
+					<span class="strong">谷薯芋、杂豆、主食</span>
+					<div>米饭,玉米(鲜),馒头，燕麦片，面包</div>
+					<span class="moreInfo">更多的...</span>
+				</div>
+				</li>
+				<li id="introduceDiv">
+				<img src="limeiru/img2.png" alt="不要着急，我在努力加载哦" class="imgs">
+				<div class="introduce">
+					<span class="strong">蛋类、肉类及制品</span>
+					<div>鸡蛋,猪肉(瘦),鸡蛋(煮),鸡,火腿肠</div>
+					<span class="moreInfo">更多的...</span>
+				</div>
+				</li>
+				<li class="introduceDiv" id="introduceDiv">
+				<img src="limeiru/img3.png" alt="不要着急，我在努力加载哦" class="imgs">
+				<div class="introduce" >
+					<span class="strong">奶类及制品</span>
+					<div>酸奶,牛奶</div>
+					<span class="moreInfo">更多的...</span>
+				</div>
+				</li>
+				<li class="introduceDiv" id="introduceDiv">
+				<img src="limeiru/img4.png" alt="不要着急，我在努力加载哦" class="imgs">
+				<div class="introduce">
+					<span class="strong">蔬果和菌藻</span>
+					<div>苹果,香蕉,番茄,黄瓜,西瓜</div>
+					<span class="moreInfo">更多的...</span>
+				</div>
+				</li>
+				<li class="introduceDiv" id="introduceDiv">
+				<img src="limeiru/img5.png" alt="不要着急，我在努力加载哦" class="imgs">
+				<div class="introduce" >
+					<span class="strong">坚果、大豆及制品</span>
+					<div>豆浆,豆脑,核桃(干)</div>
+					<span class="moreInfo">更多的...</span>
+				</div>
+				</li>
+				<li class="introduceDiv" id="introduceDiv">
+				<img src="limeiru/img6.png" alt="不要着急，我在努力加载哦" class="imgs">
+				<div class="introduce" >
+					<span class="strong">饮料</span>
+					<div>薄荷 玉米须茶,雀巢咖啡MIX【韩文版】，咖啡粉</div>
+					<span class="moreInfo">更多的...</span>
+				</div>
+				</li>
+				<li class="introduceDiv" id="introduceDiv">
+				<img src="limeiru/img7.png" alt="不要着急，我在努力加载哦" class="imgs">
+				<div class="introduce" >
+					<span class="strong">食用油、油脂及制品</span>
+					<div>色拉油,花生油,豆油,混合油(菜＋棕)</div>
+					<span class="moreInfo">更多的...</span>
+				</div>
+				</li>
+				<li class="introduceDiv" id="introduceDiv">
+				<img src="limeiru/img8.png" alt="不要着急，我在努力加载哦" class="imgs">
+				<div class="introduce">
+					<span class="strong">调味品</span>
+					<div>蜂蜜,红糖,榨菜,白砂糖</div>
+					<span class="moreInfo">更多的...</span>
+				</div>
+				</li>
+				<li class="introduceDiv" id="introduceDiv">
+				<img src="limeiru/img9.png" alt="不要着急，我在努力加载哦" class="imgs">
+				<div class="introduce" >
+					<span class="strong">零食、点心冷饮</span>
+					<div>饼干,蛋糕，薄荷松仁粽子糖,巧克力,冰激凌</div>
+					<span class="moreInfo">更多的...</span>
+				</div>
+				</li>
+				<li class="introduceDiv" id="introduceDiv">
+				<img src="limeiru/img10.png" alt="不要着急，我在努力加载哦" class="imgs">
+				<div class="introduce" >
+					<span class="strong">其他</span>
+					<div>枸杞子,绿芙蓉龟苓膏(罐装),油面筋,陈皮</div>
+					<span class="moreInfo">更多的...</span>
+				</div>
+				</li>
+				<li class="introduceDiv" id="introduceDiv">
+				<img src="limeiru/img11.png" alt="不要着急，我在努力加载哦" class="imgs">
+				<div class="introduce">
+					<span class="strong">菜肴</span>
+					<div>炒空心菜,绿豆汤,素炒小白菜,蜂蜜柠檬水,烧茄子</div>
+					<span class="moreInfo">更多的...</span>
+				</div>
+				</li>
+			</ul>
+		</div>
+
+		<!-- 右侧部分 -->
+		<div class="right">
+			<div class="rightTop">常见餐厅分类</div>
+			<ul class="rightBox">
+				<li>
+				<img src="limeiru/img21.png" alt="不要着急，我在努力加载哦" class="img">
+				<div class="information">
+					<strong>肯德基</strong>
+					<div>薯条(肯德基),鸡肉汉堡(肯德基),新奥尔良鸡翅(肯德基),劲爆鸡米花(肯德基),玉米沙拉</div>
+					<span>详情</span>
+				</div>
+				</li>
+				<li>
+				<img src="limeiru/img22.png" alt="不要着急，我在努力加载哦" class="img">
+				<div class="information">
+					<strong>麦当劳</strong>
+					<div>麦当劳脆皮甜筒,麦当劳巨无霸汉堡,麦当劳原味板烧鸡腿堡,麦当劳麦香鸡腿堡,麦当劳香辣鸡腿堡</div>
+					<span>详情</span>
+				</div>
+				</li>
+				<li>
+				<img src="limeiru/img23.png" alt="不要着急，我在努力加载哦" class="img">
+				<div class="information">
+					<strong>必胜客</strong>
+					<div>必胜客原味肋排,必胜客酱汁鸡翅,必胜客传统鸡翅,必胜客超级至尊披萨(6寸迷你),必胜客奶</div>
+					<span>详情</span>
+				</div>
+				</li>
+				<li>
+				<img src="limeiru/img24.png" alt="不要着急，我在努力加载哦" class="img">
+				<div class="information">
+					<strong>汉堡王</strong>
+					<div>汉堡王 火烤鸡腿色拉</div>
+					<span>详情</span>
+				</div>
+				</li>
+				<li>
+				<img src="limeiru/img25.png" alt="不要着急，我在努力加载哦" class="img">
+				<div class="information">
+					<strong>星巴克</strong>
+					<div>星巴克摩卡(脱脂牛奶、不加奶油),星巴克草莓星冰乐(加奶油),星巴克草莓星冰乐(无奶)</div>
+					<span>详情</span>
+				</div>
+				</li>
+				<li>
+				<img src="limeiru/img26.png" alt="不要着急，我在努力加载哦" class="img">
+				<div class="information">
+					<strong>德克士</strong>
+					<div>德克士照烧鸡肉米堡,德克士孜然鸡柳,德克士魔法鸡块</div>
+					<span>详情</span>
+				</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- 底部 -->
+<div class="footer-wrap">
+	<div class="footer">
+		<!-- 友情链接 -->
+		<p class="footer1">
+			友情链接QQ3107125374:   
+			<a href="#" class="a1">Hi运动健身</a>|
+			<a href="#">亲子百科</a>
+		</p>
+		<!-- 合作网站 -->
+		<p class="footer2">
+			合作网站：
+			<a href="#">YY直播</a>|
+			<a href="#">偶家中文网</a>|
+			<a href="#">虎牙直播</a>|
+			<a href="#">虎牙视频</a>|
+			<a href="#">多玩游戏</a>|
+			<a href="#">多玩视频</a>|
+			<a href="#">欢聚时代</a>
+		</p>
+		<!-- 版权 -->
+		<p class="footer3">
+			<a href="#">关于偶家</a>|
+			<a href="#">网站地图</a>|
+			<a href="#">手机版本</a>|
+			<span>Copyright (C) 2019 www.hiyd.com 版权所有 广州市偶家科技有限公司</span>
+		</p>
+		<!-- 备号 -->
+		<p class="footer4">
+			<span>粤网文（2015）1655-286号</span> |
+			<a href="#">粤ICP备15035085号-3</a>
+		</p>
+	</div>
+</div>
+
+<!-- 回到顶部 -->
+<div>
+    <button onclick="returnTop()" id="btnTop" title="返回顶部">
+    	<img src="limeiru/move-top.png">
+    <button>
+</div>
+
+<!-- 动态图片移动 -->
+<img src="limeiru/move.jpg" alt="请稍等鸭，我正在努力加载中哦" id="myImg" />
+
+
+<script type="text/javascript">
+
+	// 回到顶部
+	window.onscroll = function() {
+     		scrollFunction()
+ 	};
+  
+ 	function scrollFunction() {
+     	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         	document.getElementById("btnTop").style.display = "block";
+     	} else {
+         	document.getElementById("btnTop").style.display = "none";
+     	}
+ 	}
+	function returnTop() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+
+	// 点击更多出现页面效果
+	var introduceDiv=document.getElementsByClassName("introduceDiv");
+	var moreInfo=document.getElementsByClassName("moreInfo");
+	for(var i=0;i<11;i++){
+		moreInfo[i].onclick=function(){
+		var a=window.confirm("网页正在创建过程中，是否为你打开百度网页进行查询？");
+		if(a==true){
+			window.open("http://www.baidu.com/","_blank");
+		}
+	}
+	}
+
+
+	// 表单动态效果设计
+	var inp=document.getElementById("inp");
+	var button=document.getElementById("button");
+	var input1=document.getElementById("input1");
+	
+	// 实现键盘点击回车键实现搜素,因为网页有限，所以弹出弹框提示用户，并让用户选择是否进入百度进行搜索
+	button.onkeypress = function(e) {
+			/* Enter的虚拟键盘码是13*/
+			if (e.keyCode == 13) {
+				var a=window.confirm("网页正在创建过程中，是否为你打开百度网页进行查询？");
+				if(a==true){
+				window.open("http://www.baidu.com/","_blank");
+			}
+		}
+	}
+	
+	//页面加载出来，搜索框隐藏
+	window.onload=function(){
+		input1.style.display="none";
+		button.style.float="right";
+		button.style.backgroundColor="gray";
+		button.style.marginRight="100px";
+		button.style.marginTop="10px";
+		button.style.borderRadius="50px";
+		button.style.border="1px solid gray";
+		button.style.opacity="0.7";
+		button.style.color="white";
+	}
+
+	//点击搜索，搜索框显示
+	button.onclick=function(){
+		input1.style.display="";
+		button.style.float="";
+		button.style.backgroundColor="";
+		button.style.marginRight="";
+		button.style.marginTop="";
+		button.style.borderRadius="";
+		button.style.border="";
+		button.style.opacity="";
+		button.style.color="";
+	}
+
+	// 搜索框文字显示效果
+	input1.onfocus=function(){
+		if(this.value=="搜索食物查询热量" || this.value==""){
+			this.value="";
+			this.style.color="gray";
+		}
+	}
+	input1.onblur=function(){
+		if(this.value=="搜索食物查询热量" || this.value==""){
+			this.value="搜索食物查询热量";
+			this.style.color="black";
+		}
+		else{
+			this.style.color="gray";
+		}
+	}
+
+	// 点击效果
+	input1.onmousedown=function(){
+		this.style.paddingLeft="2px";
+		this.style.paddingTop="2px";
+	}
+	input1.onmouseup=function(){
+		this.style.paddingLeft="0px";
+		this.style.paddingTop="0px";
+	}
+
+	button.onmousedown=function(){
+		this.style.paddingLeft="2px";
+		this.style.paddingTop="2px";
+	}
+	button.onmouseup=function(){
+		this.style.paddingLeft="0px";
+		this.style.paddingTop="0px";
+	}
+
+	// 图片移动效果
+	var step = 1; // 移动的像素
+	var y = -1; // 垂直移动的方向，-1表示向上，1表示向下
+	var x = 1; // 水平移动的方向，-1表示向左，1表示向右
+	function myFloat(){
+		var img = document.getElementById("myImg");
+		// 获得图片和当前浏览器窗口的上边距
+		var top = parseInt(getStyle(img,"top"));
+		// 获得图片和当前浏览器窗口的左边距
+		var left =parseInt(getStyle(img,"left"));
+		// 上下移动
+		if(top <= 0){
+			y = 1;
+		}
+		if(top >= document.body.clientHeight){
+			y = -1;
+		}
+		top = (top*1) + (step * y);
+		img.style.top = top + "px";
+		// 左右移动
+		if(left <= 0){
+			x = 1;
+		}
+		if(left >= (document.body.clientWidth - img.clientWidth)){
+			x = -1;
+		}
+		left = (left*1) + (step * x);
+		img.style.left = left + "px";
+		setTimeout("myFloat()", 20);
+	}
+	function getStyle(obj,style) { 
+		if(obj.currentStyle) 
+		{ 
+			return obj.currentStyle[style]; 
+		} 
+		else 
+ 		{ 
+			return getComputedStyle(obj)[style]; 
+		} 
+	}
+
+	//解决window.onload和body.onload的冲突
+	var fun=window.onload;
+	if((typeof fun)=="function"){
+		window.onload=function(){
+			fun();
+			myFloat();
+		}
+	}
+
+
+	// 左边图片动态效果
+	var imgs=document.getElementsByClassName("imgs");
+	for(var i=0;i<11;i++){
+		imgs[i].onmousemove=function(){
+			this.style.height="101px";
+			this.style.backgroundColor="gray";
+			this.style.opacity="0.5";
+		}
+		imgs[i].onmouseout=function(){
+			this.style.height="";
+			this.style.backgroundColor="";
+			this.style.opacity="";
+		}
+	}
+
+	// 右侧图片动态效果
+	var img=document.getElementsByClassName("img");
+	for(var i=0;i<6;i++){
+		img[i].onmousemove=function(){
+			this.style.backgroundColor="gray";
+			this.style.opacity="0.5";
+		}
+		img[i].onmouseout=function(){
+			this.style.backgroundColor="";
+			this.style.opacity="";
+		}
+	}
+</script>
+</body>
+</html>
