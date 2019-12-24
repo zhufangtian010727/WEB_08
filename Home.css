@@ -1,0 +1,595 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background: url('imgs/m.png') repeat 0px 0px;
+	background-image:
+}
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*导航栏*/
+.head-wrap{
+	width: 100%;
+	height: 40px;
+	background-color: black;
+}
+.head{
+	margin: 0px auto;
+	width: 1200px;
+	height: 40px;
+	background-color: black;
+	position: relative;
+}
+.home{
+	float: left;
+}
+.guide{
+	position: absolute;
+	left: 400px;
+	top: 10px;
+}
+.guide ul li{
+	border-right: 1px solid rgb(120,120,120); 
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+}
+.guide a{
+	display: inline;
+	text-decoration: none;
+	font-size: 18px;
+	color: white;
+}
+.guide a:hover{
+	color: #C20C0C;
+}
+.login{
+	color: rgb(120,120,120);
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+.login a{
+	color: white;
+	font-size: 16px;
+}
+.login a:hover{
+	color: #C20C0C;
+}
+/*简介*/
+.top-wrap{
+	width: 100%;
+	height: 400px;
+}
+.top{
+	position: relative;
+	margin: 0px auto;
+	width: 1200px;
+	height: 400px;	
+	background: url('imgs/v-bg.jpg') no-repeat;
+	background-size: 1200px 400px;
+	color: white;
+	text-align: center;
+}
+.top>p{
+	position: relative;
+	top: 300px;
+	font-size: 32px;
+}
+.top-plan{
+	width: 320px;
+	height: 360px;
+	background-color: rgba(0,0,0,50%);
+	position: absolute;
+	right: 150px;
+	top: 20px;
+}
+.top-plan>p{
+	text-align: center;
+	color: #FFF;
+	font-size: 14px;
+	margin-top: 20px;
+}
+.top-plan>h2{
+	margin-top: 64px;
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 59px;
+	}
+.sex-wrap {
+	margin: 62px auto 0 auto;
+	width: 272px;
+}
+.sex-wrap span {
+	display: block;
+	width: 110px;
+	height: 39px;
+	line-height: 39px;
+	color: #FFF;
+	background: #f83636;
+	border-radius: 2px;
+}
+.sex-wrap span.sboy {
+	float: left;
+}
+.sex-wrap span.sgirl {
+	float: right;
+}
+.sex-wrap span:hover {
+	opacity: 0.8;
+	opacity:80%;
+	cursor:pointer;
+}
+#btnTop {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	border: none;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,30%);
+ }
+ #btnTop:hover {
+	background-color: rgba(255,0,0,10%);
+ }
+ /*课程*/
+.course-wrap{
+	margin-top: 34px;
+	width: 100%;
+	height: 550px;
+}
+.course{
+	width: 1200px;
+	height: 550px;
+	margin: 0px auto;
+}
+.course-head{
+	position: relative;
+	width: 1200px;
+	height: 79px;
+	border-top: 1px solid rgba(245,245,245,40%);
+	border-bottom: 1px solid rgba(245,245,245,40%);
+	color: rgb(120,120,120);
+}
+.course-head>h2{
+ 	font-size: 32px;
+ 	position: absolute;
+  	top: 10px;
+  	left: 10px;
+ 	color: rgb(180,180,180);
+}
+.course-head>p{
+	position: absolute;
+	bottom: 10px;
+	left: 16px;
+}
+/*锻炼动作*/
+.motion{
+	float: left;
+	width: 390px;
+	height: 470px;
+	color: rgb(120,120,120);
+}
+.motion>h3>span{
+	color: yellow;
+}
+.personal{
+ 	margin-top: 20px;
+ 	display: block;
+	width: 380px;
+	height: 150px;
+	background: url(imgs/make-plan.jpg) no-repeat;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.motion>p{
+ 	font-size: 12px;
+	color: #f0922e;
+	margin-top: 12px;
+}
+.motion>p>em{
+ 	font-size: 24px;
+}
+.body-part{
+ 	width: 390px;
+ 	height: 210px;
+}
+.body-part li{
+ 	float: left;
+	margin: 10px 10px 0 0;
+	width: 120px;
+	height: 94px;
+	border-radius: 2px;
+	overflow: hidden;
+}
+.body-part a{
+ 	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+}
+.body-part a:hover{
+ 	opacity: 0.8;
+}
+.img-wrap img{
+width: 100%;
+height: 100%;
+}
+.body-part li h2{
+ 	width: 120px;
+	height: 94px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	line-height: 94px;
+	text-align: center;
+	font-size: 24px;
+	color: #FFFFFF;
+}
+/*名人课程*/
+ .famous{
+ 	width: 380px;
+ 	height: 470px;
+ 	float: left;
+	color: rgb(120,120,120);
+ 	margin-right: 20px;
+}
+.famous>h3>span{
+ 	color: yellow;
+}
+.famous-part{
+ 	width: 380px;
+ 	height: 400px;
+}
+.famous-part li{
+	width: 380px;
+	height: 190px;
+	margin-top: 20px;
+	position: relative;
+	overflow: hidden;			
+ }
+ .famous-part li:first-child{
+ 	margin-bottom: 20px;
+ }
+ .famous-part a{
+	display: block;
+	width: 380px;
+	height: 190px;
+	position: relative;
+	text-decoration: none;
+	color: white;
+}
+.famous-part a:hover{
+ 	opacity: 0.8;
+}
+.famous-part img{
+ 	width: 380px;
+ 	height: 190px;
+}
+.mask{
+ 	background: url(imgs/shadow.png);
+	height: 146px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+.mask h2{
+ 	font-weight: bold;
+	padding: 0 10px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0px;
+}
+/*家庭锻炼计划*/
+.house{
+ 	width: 380px;
+ 	height: 470px;
+ 	float: left;
+ 	color: rgb(120,120,120);
+}
+.house>h3>span{
+ 	color: yellow;
+}
+.house-part{
+ 	width: 380px;
+ 	height: 400px;
+}
+.house-part li{
+	display: block;
+ 	color: #999;
+ 	width: 382px;
+ 	height: 85px;
+ 	position: relative;
+	font-size: 12px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #eeeeee;
+ }
+ .house-part a{
+ 	width: 380px;
+ 	height: 85px;
+ 	display: block;
+ 	text-decoration: none;
+ 	color: #8c8c8c;
+ 	position: relative;
+ }
+.house-part a:hover{
+ 	opacity: 0.8;
+ }
+.house-part img{
+ 	width: 128px;
+	height: 70px;
+	position: absolute;
+	top: 15px;
+	overflow: hidden;
+	float: left;
+	display: inline-block;
+}
+.house-part h2{
+	font-size: 14px;
+ 	position: absolute;
+ 	top: 15px;
+ 	left: 150px;
+}
+.house-part p{
+ 	position: absolute;
+ 	top: 55px;
+ 	left: 150px;
+}
+
+/*饮食*/
+.food-wrap{
+ 	margin-top: 30px;
+ 	width: 100%;
+ 	height: 750px;
+}
+.food{
+ 	width: 1200px;
+ 	height: 750px;
+ 	margin: 0px auto;
+}
+.food-head{
+ 	position: relative;
+ 	width: 1200px;
+ 	height: 79px;
+ 	border-top: 1px solid rgba(245,245,245,40%); 
+ 	border-bottom: 1px solid rgba(245,245,245,40%);
+ 	color: rgb(120,120,120);
+}
+.food-head>h2{
+ 	font-size: 32px;
+ 	position: absolute;
+  	top: 10px;
+  	left: 10px;
+ 	color: rgb(180,180,180);
+}
+.food-head>p{
+ 	position: absolute;
+ 	bottom: 10px;
+ 	left: 16px;
+}
+/*饮食查询*/
+.food-search{
+ 	width: 380px;
+ 	height: 660px;
+ 	margin-right: 10px;
+ 	float: left;
+ 	color: rgb(120,120,120);
+}
+.food-search h3{
+ 	margin-top: 20px;
+}
+.food-search>h3>span{
+ 	color: yellow;
+}
+.normal{
+ 	width: 380px;
+ 	height: 600px;
+}
+.normal ul{
+ 	width: 378px;
+ 	height: 593px;
+ 	margin-top: 10px;
+ 	border-top: 1px solid rgb(130,130,130);
+	border-left: 1px solid rgb(130,130,130);
+	font-size: 10px;
+	text-align: center;
+}
+.normal li{
+ 	display: block;
+ 	text-decoration: none;
+ 	float: left;
+	text-align: center;
+	width: 126px;
+}
+.normal a{
+ 	text-decoration: none;
+ 	display: block;
+	color: #999999;
+	border-bottom: 1px solid rgb(130,130,130);
+	border-right: 1px solid rgb(130,130,130);
+	padding: 10px 0 10px;
+}
+.normal a:hover{
+ 	opacity: 0.8;
+}
+.normal img{
+ 	width: 90px;
+	height: 90px;
+	border-radius: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+/*饮食知识*/
+.food-knowledge{
+ 	width: 380px;
+ 	height: 660px;
+ 	margin-right: 20px;
+ 	float: left;
+ 	color: rgb(120,120,120);
+}
+.food-knowledge h3{
+ 	margin-top: 20px;
+}
+.food-knowledge>h3>span{
+ 	color: yellow;
+}
+.knowledge-part{
+	width: 380px;
+	height: 600px;
+}
+.knowledge-part li{
+	position: relative;
+	border-radius: 2px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+.konwledge-part a{
+	display: block;
+	text-decoration: none;
+}
+.knowledge-part a:hover .mask_1{
+	background-image: none;
+	height: 100%;
+	background: #000;
+	opacity: 0.75;
+}
+.knowledge-part a:hover .cont{
+	padding:50px 10px 0px 10px;
+	height: 130px;
+}
+.knowledge-part a:hover .cont p{
+	height: 90px;
+	overflow: hidden;
+}
+.knowledge-part img{
+	width: 380px;
+	height: 180px;
+	display: block;
+	overflow: hidden;
+}
+.mask_1{
+	background:url(imgs/shadow.png);
+	width: 100%;
+	height: 146px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	-webkit-transition: all .3s;
+    transition: all .3s;
+}
+.cont{
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 360px;
+    height: 55px;
+    padding: 82px 10px 0 10px;
+}
+.cont h3{
+	margin-top: 0px;
+	font-size: 18px;
+	color: #fff;
+}
+.cont p{
+	font-size: 14px;
+	line-height: 20px;
+	height:20px;
+	margin-top: 10px;
+	color: #ccc;
+	overflow: hidden;
+}
+/*计算工具*/
+.nutrient{
+	width: 400px;
+ 	height: 660px;
+ 	float: left;
+ 	color: rgb(120,120,120);
+}
+.nutrient h3{
+	margin-top: 20px;
+}
+.nutrient h3>span{
+	color: yellow;
+}
+.nutrient-part{
+	margin-top: 10px;
+	background: url(imgs/food-.jpg) no-repeat;
+	background-size: 100% 100%; 
+	width: 400px;
+	height: 600px;
+}
+.nutrient-part a{
+	font-style: bold;
+	display: block;
+	text-decoration: none;
+	color: rgb(20,20,20);
+	margin-bottom: 50px;
+}
+.nutrient-part p{
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 36px;
+}
+
+#box{width:1200px; height:400px; border:1px black solid; margin:10px auto;}
+#box ul{
+	list-style:none; 
+	position:relative;}
+#box ul li{
+	width:1200px; 
+	height:400px; 
+	position:absolute; 
+	transition:all 1s; 
+	opacity:0;
+}
+/*底部*/
+	.footer-wrap{
+		height:172px;
+		background-color: black;
+		color: gray;
+		font-size: 12px;
+	}
+	.footer{
+		height:172px;
+		width:1200px;
+		margin:0 auto;
+	}
+	.footer a{
+		color: gray;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.footer1{
+		padding-top: 30px;
+		padding-bottom: 20px;
+		padding-left: 400px;
+	}
+	.a1{
+		margin-left:15px;
+	}
+	.footer2{
+		padding-left:300px;
+	}
+	.footer3{
+		padding-top:10px;
+		padding-left: 260px;
+	}
+	.footer4{
+		padding-top:10px;
+		padding-left:400px;
+	}
+	.footer span{
+		margin-left: 10px;
+		margin-right:10px;
+	}
