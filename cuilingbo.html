@@ -11,6 +11,15 @@
 			background-image: url("cuilingbo/header_bg.jpg");
            
 		}
+		.hezi{
+			width: 1600px;
+			height:2000px; 
+			position: fixed;
+			left: 0px;
+			top:0px;
+			background-color:rgb(255,255,255); 
+			border-top: 5px solid rgb(0,0,0);
+		}
 		/*导航栏*/
 		a{
 			text-decoration: none;
@@ -880,11 +889,12 @@
 		</p>
 	</div>
 </div>
-<div>
+<div style="height: 0px">
     	<button onclick="returnTop()" id="btnTop" title="返回顶部">
     		<img src="cuilingbo/move-top.png">
     	<button>
-</div>  	
+</div> 
+<div class="hezi"></div>  	
 <script type="text/javascript">
 function getStyle(obj, attr){
 	if(obj.currentStyle){
@@ -929,7 +939,7 @@ function animate(obj,json,callback){
 	function carrynext(){
 		i++;
 		animate(slider,{left:-400*i},function(){
-			if(i===4){
+			if(i===5){
           slider.style.left="-400px";
           i=1;
           }
@@ -1062,6 +1072,16 @@ function animate(obj,json,callback){
 		    document.body.scrollTop = 0;
 		    document.documentElement.scrollTop = 0;
 		}
+	var hezi=document.getElementsByClassName('hezi')[0];
+    var c=10;
+    setInterval(function(){
+   	var k=parseInt(getStyle(hezi,'top'));
+   	k=k+c;
+   	var z=parseInt(getStyle(hezi,'height'));
+   	z=z-(1*c);
+   	hezi.style.top=k+'px';
+   	hezi.style.height=z+'px';
+   },30);
 			
 		
 </script>
